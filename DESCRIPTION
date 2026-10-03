@@ -1,0 +1,30 @@
+Package: PhysioHeadModels
+Title: Realistic EEG Head Models and Forward Solvers for the Physio Ecosystem
+Version: 0.1.1
+Authors@R:
+    person(given = "Yusuke",
+           family = "Matsui",
+           role = c("aut", "cre"),
+           email = "mail.to.matsui@gmail.com")
+Description: Provides EEG forward-model building blocks for the Physio
+    ecosystem: an analytic multi-concentric-sphere leadfield, a boundary
+    element method (BEM) solver with the double-layer operator for custom head
+    meshes, cortical source-space helpers with surface normals, and on-demand
+    fetchers for large published head models (the New York Head and FreeSurfer
+    fsaverage) that are downloaded to a per-user cache rather than shipped.
+Depends:
+    R (>= 4.2)
+Imports:
+    utils
+Suggests:
+    hdf5r,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.2.0)
+VignetteBuilder: knitr
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+URL: https://github.com/x-biosignal/PhysioHeadModels
+BugReports: https://github.com/x-biosignal/PhysioHeadModels/issues
