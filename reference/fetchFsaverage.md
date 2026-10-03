@@ -25,3 +25,15 @@ The path to the fsaverage directory in the cache.
 ## See also
 
 [`fetchNYHead()`](https://x-biosignal.github.io/PhysioHeadModels/reference/fetchNYHead.md)
+
+## Examples
+
+``` r
+# With the surfaces already in place the fetcher just resolves their path.
+# Here a temporary stand-in directory shows that resolution offline (a real
+# run needs the FreeSurfer/MNE fsaverage surfaces placed in the directory).
+dir <- file.path(tempdir(), "fsaverage")
+dir.create(dir, showWarnings = FALSE)
+fetchFsaverage(dest = dir)
+#> [1] "/tmp/RtmpHVJtCA/fsaverage"
+```

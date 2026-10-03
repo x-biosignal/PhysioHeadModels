@@ -23,3 +23,14 @@ constrainOrientation(leadfield, normals)
 ## Value
 
 An n_electrodes x n_sources orientation-constrained leadfield.
+
+## Examples
+
+``` r
+ss <- sphericalSourceSpace(40, radius = 0.6)
+e <- icosphere(2)$vertices[1:19, ]
+lf <- sphereLeadfield(e, ss$positions)
+lc <- constrainOrientation(lf, ss$normals)
+dim(lc)
+#> [1] 19 40
+```

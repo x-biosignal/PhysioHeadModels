@@ -19,3 +19,15 @@ leadfieldRDM(test, reference)
 ## Value
 
 A named numeric vector `c(RDM, MAG)` (means over columns).
+
+## Examples
+
+``` r
+e <- icosphere(2)$vertices[1:19, ]
+s <- rbind(c(0, 0, 0.5), c(0.3, 0, 0.2))
+lf <- sphereLeadfield(e, s)
+# A leadfield compared with itself is identical: RDM 0, MAG 1.
+leadfieldRDM(lf, lf)
+#> RDM MAG 
+#>   0   1 
+```
